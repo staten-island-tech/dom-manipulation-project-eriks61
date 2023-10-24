@@ -5,6 +5,16 @@
     color: cornsilk;
     text-align: center;
 }
-.catposter{
-    width:10rem;
-}
+
+.card {
+    background-color: green;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    height: 20vh;
+    width: 20vh;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
