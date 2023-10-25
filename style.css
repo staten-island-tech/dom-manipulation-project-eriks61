@@ -1,5 +1,5 @@
 #big-black-box {
-    background-color: black;
+    background-color: orangered;
 
     font-size: 2vh;
     color: cornsilk;
@@ -17,4 +17,9 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+  }
+  .card-title {
+    display: flex;
+    font-size: 0.9rem;
+    text-transform: uppercase;
   }

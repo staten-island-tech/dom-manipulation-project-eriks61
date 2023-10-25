@@ -33,15 +33,23 @@
 
 const DOMSelectors = {
     button: document.getElementById("btn"),
-    box: document.getElementById("big-black-box"),
-    input: document.querySelector(`#input`),
-};
+    card: document.getElementsByClassName("card"),
+    input1: document.getElementsByName("FirstName"),
+    input2: document.getElementsByName("LastName"),
+    input3: document.getElementsByName("Occupation"),
+  };
 
 /* const cat = "meow";
 DOMSelectors.box.insertAdjacentHTML("afterend", `<h1>We are an ${cat}</h1>` )
  */
 DOMSelectors.button.addEventListener("click", function(){
-  let input = DOMSelectors.input.value;
-  DOMSelectors.box.insertAdjacentHTML("beforeend",`<p>${input}</p>`);
-  DOMSelectors.input.value = "";
+  let input1 = DOMSelectors.input1.value;
+  DOMSelectors.card.insertAdjacentHTML("afterbegin",`<p>${input1}</p>`);
+  DOMSelectors.input1.value = "";
+  let input2 = DOMSelectors.input2.value;
+  DOMSelectors.card.insertAdjacentHTML("afterbegin", `<p>${input2}</p>`)
+  DOMSelectors.input2.value = "";
+  let input3 = DOMSelectors.input3.value;
+  DOMSelectors.card.insertAdjacentHTML("afterbegin", `<p>${input3}</p>`)
+  DOMSelectors.input3.value = "";
 });
