@@ -33,23 +33,27 @@
 
 const DOMSelectors = {
     button: document.getElementById("btn"),
-    card: document.getElementsByClassName("card"),
-    input1: document.getElementsByName("FirstName"),
-    input2: document.getElementsByName("LastName"),
-    input3: document.getElementsByName("Occupation"),
+    card: document.querySelector(".card"),
+    input1: document.querySelector("input[name='FullName']"),
+    input2: document.querySelector("input[name='Age']"),
+    input3: document.querySelector("input[name='Occupation']"),
   };
 
 /* const cat = "meow";
 DOMSelectors.box.insertAdjacentHTML("afterend", `<h1>We are an ${cat}</h1>` )
  */
 DOMSelectors.button.addEventListener("click", function(){
-  let input1 = DOMSelectors.input1.value;
-  DOMSelectors.card.insertAdjacentHTML("afterbegin",`<p>${input1}</p>`);
+let input1Value=DOMSelectors.input1.value;
+let input2Value=DOMSelectors.input2.value;
+let input3Value=DOMSelectors.input3.value;
+
+if(input1Value && input2Value && input3Value){
+  const cardInfo = document.createElement("div");
+  cardInfo.insertAdjacentHTML("afterbegin", `<p>${input1Value}</p><p>${input2Value}</p><p>${input3Value}</p>`)
+  DOMSelectors.card.appendChild(cardInfo);
+
   DOMSelectors.input1.value = "";
-  let input2 = DOMSelectors.input2.value;
-  DOMSelectors.card.insertAdjacentHTML("afterbegin", `<p>${input2}</p>`)
   DOMSelectors.input2.value = "";
-  let input3 = DOMSelectors.input3.value;
-  DOMSelectors.card.insertAdjacentHTML("afterbegin", `<p>${input3}</p>`)
   DOMSelectors.input3.value = "";
+}
 });
