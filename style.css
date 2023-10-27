@@ -1,25 +1,28 @@
 #big-black-box {
-    background-color: orangered;
+  background-color: orangered;
 
-    font-size: 2vh;
-    color: cornsilk;
-    text-align: center;
+  font-size: 2vh;
+  color: cornsilk;
+  text-align: center;
 }
 
 .card {
-    background-color: green;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
-    height: 20vh;
-    width: 20vh;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-  }
-  .card-title {
-    display: flex;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-  }
+  background-color: green;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+  border-radius: 2rem;
+  padding: 20px;
+  height: 20vh;
+  width: 20vh;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  visibility: hidden;
+}
+.card-title {
+  display: flex;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
