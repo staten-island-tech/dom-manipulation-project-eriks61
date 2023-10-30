@@ -60,11 +60,3 @@ DOMSelectors.button.addEventListener("click", function () {
     DOMSelectors.input3.value = "";
   }
 });
-
-DOMSelectors.button.addEventListener(
-  "click",
-  () => {
-    DOMSelectors.getElementById("card").visibility = visible;
-  },
-  false
-);

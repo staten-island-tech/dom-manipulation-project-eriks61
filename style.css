@@ -19,7 +19,6 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  visibility: hidden;
 }
 .card-title {
   display: flex;
