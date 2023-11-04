@@ -33,41 +33,49 @@
 
 const DOMSelectors = {
   button: document.getElementById("btn"),
-  card: document.querySelector(".card"),
   input1: document.querySelector("input[name='FullName']"),
   input2: document.querySelector("input[name='Image']"),
   input3: document.querySelector("input[name='Occupation']"),
-  gallery: document.getElementById("boxy"),
+  gallery: document.getElementById("card-container"),
+  emptyCard: document.getElementById("empty-card"),
 };
 
-DOMSelectors.button.addEventListener("click", function () {
- 
-});
+
+let isInitialCardVisible = false; 
+
 
 DOMSelectors.button.addEventListener("click", function createcard() {
-  DOMSelectors.gallery.insertAdjacentHTML(
-    "afterbegin",
-    ` <div class="flex-container">
-    <div id="boxy" class="boxy">
-    <h2 class="card-name>${input1Value}</h2>
-    <h3 class="card-img>${input2Value}</h3>
-    <h3 class="card-occupation>${input3Value}</h3>
-    </div>
-    </div>
- `
-  );
   const input1Value = DOMSelectors.input1.value;
   const input2Value = DOMSelectors.input2.value;
   const input3Value = DOMSelectors.input3.value;
 
-  /*   if (input1Value && input2Value && input3Value) {
-    const cardInfo = document.createElement("div");
-    cardInfo.insertAdjacentHTML(
-      "afterbegin",
-      `<p>${input1Value}</p><p>${input2Value}</p><p>${input3Value}</p>`
-    ); */ /* 
-    DOMSelectors.card.appendChild(cardInfo);
- */ DOMSelectors.input1.value = "";
-  DOMSelectors.input2.value = "";
-  DOMSelectors.input3.value = "";
+
+  if (input1Value && input2Value && input3Value) {
+    const card = document.createElement("div");
+    card.className = "boxy";
+    card.innerHTML = `
+      <h2 class="card-name">${input1Value}</h2>
+      <h3 class="card-img">${input2Value}</h3>
+      <h3 class="card-occupation">${input3Value}</h3>
+    `;
+
+
+    DOMSelectors.gallery.insertAdjacentElement("afterbegin", card);
+
+
+    DOMSelectors.input1.value = "";
+    DOMSelectors.input2.value = "";
+    DOMSelectors.input3.value = "";
+
+
+  
+    if (!isInitialCardVisible) {
+      DOMSelectors.emptyCard.style.display = "flex";
+      isInitialCardVisible = true;
+    }
+  }
 });
+
+
+
+
