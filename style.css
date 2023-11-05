@@ -27,11 +27,11 @@ body {
   background-color: green;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 20px;
+  margin: 15px;
   border-radius: 2rem;
   padding: 20px;
-  height: 20vh;
-  width: 20vh;
+  height: 40vh;
+  width: 40vh;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
