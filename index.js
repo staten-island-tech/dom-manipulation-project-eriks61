@@ -39,4 +39,3 @@ DOMSelectors.button.addEventListener("click", function createcard() {
 
 
 //delete with event listener with event.target.parentElement.possibly parent element again
-//make new button have id of btn
