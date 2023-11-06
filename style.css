@@ -3,17 +3,16 @@
 }
 
 body {
-  background-color: aqua;
+  background-color: beige;
 }
 
-
 #big-black-box {
-  background-color: orangered;
+  background-color: burlywood;
   font-size: 2vh;
   color: cornsilk;
   text-align: center;
+  border-radius: 10px;
 }
-
 
 .flex-container {
   display: flex;
@@ -22,9 +21,8 @@ body {
   padding: 20px;
 }
 
-
 .boxy {
-  background-color: green;
+  background-color: orange;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 15px;
@@ -37,23 +35,23 @@ body {
   flex-direction: row;
 }
 
+.card-img {
+  height: 50%;
+  width: 50%;
+}
 
 .card-name {
-  font-size: 0.9rem;
-  text-transform: uppercase;
+  text-align: center;
 }
-
-
-.card-img {
-  height: 80%;
-  width: 70%;
-}
-
 
 .card-occupation {
-  font-size: 0.7rem;
+  text-align: center;
 }
 
-
-
-
+.deletebtn {
+  height: 6%;
+  width: 10%;
+  background-color: red;
+  font-size: 0.7rem;
+  text-align: center;
+}
