@@ -18,10 +18,10 @@ DOMSelectors.button.addEventListener("click", function createcard() {
     const card = document.createElement("div");
     card.className = "boxy";
     card.innerHTML = `
+      <div class="card-image" style="background-image: url(${input2Value});"></div>
       <h2 class="card-name">${input1Value}</h2>
-      <h3 class="card-img">${input2Value}</h3>
       <h3 class="card-occupation">${input3Value}</h3>
-      <h5 class="deletebtn" id="btn">Delete<h5>
+      <button class="deletebtn">Delete</button>
     `;
 
     DOMSelectors.gallery.insertAdjacentElement("afterbegin", card);
@@ -30,6 +30,17 @@ DOMSelectors.button.addEventListener("click", function createcard() {
     DOMSelectors.input2.value = "";
     DOMSelectors.input3.value = "";
 
+   
+
+    const deleteButton = card.querySelector(".deletebtn");
+    deleteButton.addEventListener("click", function(){
+      card.remove();
+
+      if (DOMSelectors.gallery.children.length === 0) {
+        DOMSelectors.emptyCard.style.display = "none";
+        cardvisibility = false;
+      }
+    });
     if (!cardvisibility) {
       DOMSelectors.emptyCard.style.display = "flex";
       cardvisibility = true;

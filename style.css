@@ -36,8 +36,11 @@ body {
 }
 
 .card-img {
-  height: 50%;
-  width: 50%;
+  height: 150px;
+  width: 150px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
 }
 
 .card-name {
@@ -50,8 +53,9 @@ body {
 
 .deletebtn {
   height: 6%;
-  width: 10%;
+  width: 18%;
   background-color: red;
   font-size: 0.7rem;
   text-align: center;
+  cursor: pointer;
 }
