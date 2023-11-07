@@ -35,12 +35,12 @@ body {
   flex-direction: row;
 }
 
-.card-img {
+.card-image{
   height: 150px;
   width: 150px;
   background-size: cover;
   background-position: center;
-  margin-bottom: 10px;
+  background-repeat: no-repeat;
 }
 
 .card-name {

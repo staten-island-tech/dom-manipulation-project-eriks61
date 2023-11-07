@@ -18,13 +18,15 @@ DOMSelectors.button.addEventListener("click", function createcard() {
     const card = document.createElement("div");
     card.className = "boxy";
     card.innerHTML = `
-      <div class="card-image" style="background-image: url(${input2Value});"></div>
+      <div class="card-image"></div>
       <h2 class="card-name">${input1Value}</h2>
       <h3 class="card-occupation">${input3Value}</h3>
       <button class="deletebtn">Delete</button>
     `;
 
     DOMSelectors.gallery.insertAdjacentElement("afterbegin", card);
+
+    card.querySelector(".card-image").style.backgroundImage = `url('${input2Value}')`
 
     DOMSelectors.input1.value = "";
     DOMSelectors.input2.value = "";
