@@ -19,7 +19,7 @@ DOMSelectors.button.addEventListener("click", function createcard() {
     card.className = "boxy";
     card.innerHTML = `
       <h2 class="card-name">${input1Value}</h2>
-      <img src="${input3Value}" alt=""class="card-image">
+      <img src="${input3Value}"class="card-image">
       <h3 class="card-occupation">${input3Value}</h3>
       <button class="deletebtn">Delete</button>
     `;
